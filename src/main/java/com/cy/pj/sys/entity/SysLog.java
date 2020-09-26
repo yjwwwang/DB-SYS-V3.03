@@ -7,7 +7,7 @@ import lombok.Data;
  * 建议:java中所有用于封装数据的对象都实现序列化接口
  * 便于后续进行扩展.
  */
-@Data
+
 public class SysLog implements Serializable{
 	/**
 	 * 序列化id,对象序列化时的唯一标识,不定义此id
@@ -19,6 +19,71 @@ public class SysLog implements Serializable{
 	 */
 	private static final long serialVersionUID = 8924387722922123121L;
 	private Integer id;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getOperation() {
+		return operation;
+	}
+
+	public void setOperation(String operation) {
+		this.operation = operation;
+	}
+
+	public String getMethod() {
+		return method;
+	}
+
+	public void setMethod(String method) {
+		this.method = method;
+	}
+
+	public String getParams() {
+		return params;
+	}
+
+	public void setParams(String params) {
+		this.params = params;
+	}
+
+	public Long getTime() {
+		return time;
+	}
+
+	public void setTime(Long time) {
+		this.time = time;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
+
 	//用户名
 	private String username;
 	//用户操作
